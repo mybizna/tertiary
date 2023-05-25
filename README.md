@@ -6,9 +6,9 @@ The Tertiary Management System is a software application designed to facilitate 
 ## System Structure
 The Tertiary Management System follows a hierarchical structure for organizing the components of the university. The structure is as follows:
 
- - Tertiary: The top-level entity representing the university. It encompasses all the faculties, schools, departments, programs, courses, and students within the university.
+ - **Tertiary:** The top-level entity representing the university. It encompasses all the faculties, schools, departments, programs, courses, and students within the university.
 
- - Faculty: Represents the major divisions within the university, such as the Faculty of Arts, Faculty of Science, Faculty of Engineering, etc. Faculties consist of various schools.
+ - **Faculty:** Represents the major divisions within the university, such as the Faculty of Arts, Faculty of Science, Faculty of Engineering, etc. Faculties consist of various schools.
 
  - School: Refers to the intermediate units within a faculty, such as the School of Computer Science, School of Business, School of Medicine, etc. Schools consist of different departments.
 
@@ -23,6 +23,7 @@ The Tertiary Management System follows a hierarchical structure for organizing t
  - Student: Represents the individual students enrolled in a class year. Each student has a set of qualifications representing their academic achievements.
 
  - Qualification: Refers to the academic qualifications achieved by a student, such as diplomas, degrees, certificates, etc. Qualifications are associated with specific programs and indicate the student's completion of specific requirements.
+  ```
     Tertiary
        |
     Faculty
@@ -39,8 +40,8 @@ The Tertiary Management System follows a hierarchical structure for organizing t
        |                    |
        ---------------------- 
                 |
-            ClassYear    
-                                          
+           ClassYear    
+   ```                                       
 
 ## Functionality
 The Tertiary Management System provides the following functionality:
