@@ -1,0 +1,13 @@
+{
+    "name": "Tertiary",
+    "alias": "tertiary",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
