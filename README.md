@@ -23,6 +23,8 @@ The Tertiary Management System follows a hierarchical structure for organizing t
  - Student: Represents the individual students enrolled in a class year. Each student has a set of qualifications representing their academic achievements.
 
  - Qualification: Refers to the academic qualifications achieved by a student, such as diplomas, degrees, certificates, etc. Qualifications are associated with specific programs and indicate the student's completion of specific requirements.
+
+ ```
     Tertiary
        |
     Faculty
@@ -40,7 +42,7 @@ The Tertiary Management System follows a hierarchical structure for organizing t
        ---------------------- 
                 |
             ClassYear    
-                                          
+```                                       
 
 ## Functionality
 The Tertiary Management System provides the following functionality:
