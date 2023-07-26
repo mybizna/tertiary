@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Core\Classes\Views\ListTable;
 use Modules\Core\Classes\Views\FormBuilder;
 
-class StudentCourse extends BaseModel
+class LearnerCourse extends BaseModel
 {
 
     protected $fillable = ['name'];
