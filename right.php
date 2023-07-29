@@ -1,5 +1,7 @@
 <?php
 
+/** @var \Modules\Base\Classes\Fetch\Rights $this */
+
 $this->add_right("tertiary", "tertiary", "administrator", view:true, add:true, edit:true, delete:true);
 $this->add_right("tertiary", "tertiary", "manager", view:true, add:true, edit:true, delete:true);
 $this->add_right("tertiary", "tertiary", "supervisor", view:true, add:true, edit:true, delete:true);
