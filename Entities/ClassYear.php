@@ -18,6 +18,13 @@ class ClassYear extends BaseModel
     protected $fillable = ['name'];
 
     /**
+     * The fields that are to be render when performing relationship queries.
+     *
+     * @var array<string>
+     */
+    public $rec_names = ['name'];
+
+    /**
      * List of fields to be migrated to the datebase when creating or updating model during migration.
      *
      * @var array<string>
@@ -49,7 +56,7 @@ class ClassYear extends BaseModel
 
     /**
      * Function for defining list of fields in form view.
-     * 
+     *
      * @return FormBuilder
      */
     public function formBuilder(): FormBuilder
@@ -65,7 +72,7 @@ class ClassYear extends BaseModel
 
     /**
      * Function for defining list of fields in filter view.
-     * 
+     *
      * @return FormBuilder
      */
     public function filter(): FormBuilder
