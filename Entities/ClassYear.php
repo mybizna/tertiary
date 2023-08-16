@@ -59,6 +59,11 @@ class ClassYear extends BaseModel
     {
         $structure = [
             'table' => ['name', 'published'],
+            'form' => [
+                ['label' => 'Name', 'class' => 'w-full', 'fields' => ['name']],
+                ['label' => 'Description', 'class' => 'w-full', 'fields' => ['description']],
+                ['label' => 'Published', 'class' => 'w-1/6', 'fields' => ['published']],
+            ],
             'filter' => ['name', 'published'],
         ];
 

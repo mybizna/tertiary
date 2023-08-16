@@ -58,6 +58,12 @@ class Tertiary extends BaseModel
     {
         $structure = [
             'table' => ['name', 'published'],
+            'form' => [
+              
+                ['label' => 'Name', 'class' => 'w-full', 'fields' => ['name']],
+                ['label' => 'Published', 'class' => 'w-1/2', 'fields' => ['published']],
+                ['label' => 'Description', 'class' => 'w-full', 'fields' => ['description']],
+            ],
             'filter' => ['name', 'published'],
         ];
 
