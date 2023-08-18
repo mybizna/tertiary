@@ -57,15 +57,13 @@ class ClassYear extends BaseModel
      */
     public function structure($structure): array
     {
-        $structure = [
-            'table' => ['name', 'published'],
-            'form' => [
-                ['label' => 'Name', 'class' => 'w-full', 'fields' => ['name']],
-                ['label' => 'Description', 'class' => 'w-full', 'fields' => ['description']],
-                ['label' => 'Published', 'class' => 'w-1/6', 'fields' => ['published']],
-            ],
-            'filter' => ['name', 'published'],
+        $structure['table'] = ['name', 'published'];
+        $structure['form'] = [
+            ['label' => 'Name', 'class' => 'col-span-full', 'fields' => ['name']],
+            ['label' => 'Description', 'class' => 'col-span-full', 'fields' => ['description']],
+            ['label' => 'Published', 'class' => 'col-span-6', 'fields' => ['published']],
         ];
+        $structure['filter'] = ['name', 'published'];
 
         return $structure;
     }
