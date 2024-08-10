@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Tertiary\Entities;
+namespace Modules\Tertiary\Models;
 
-use Modules\Base\Entities\BaseModel;
+use Modules\Base\Models\BaseModel;
 
 class Course extends BaseModel
 {
