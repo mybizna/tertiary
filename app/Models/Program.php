@@ -6,6 +6,7 @@ use Modules\Base\Models\BaseModel;
 
 class Program extends BaseModel
 {
+
     /**
      * The fields that can be filled
      *
