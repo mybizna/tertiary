@@ -2,9 +2,6 @@
 
 namespace Modules\Tertiary\Filament\Resources;
 
-use Modules\Tertiary\Filament\Resources\ClassYearResource\Pages;
-use Modules\Tertiary\Filament\Resources\ClassYearResource\RelationManagers;
-use Modules\Tertiary\Models\ClassYear;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,10 +9,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Tertiary\Filament\Resources\ClassYearResource\Pages;
+use Modules\Tertiary\Models\ClassYear;
 
 class ClassYearResource extends Resource
 {
     protected static ?string $model = ClassYear::class;
+
+    protected static ?string $slug = 'tertiary/class/year';
+
+    protected static ?string $navigationGroup = 'Tertiary';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

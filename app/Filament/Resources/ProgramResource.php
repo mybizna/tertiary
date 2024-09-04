@@ -2,9 +2,6 @@
 
 namespace Modules\Tertiary\Filament\Resources;
 
-use Modules\Tertiary\Filament\Resources\ProgramResource\Pages;
-use Modules\Tertiary\Filament\Resources\ProgramResource\RelationManagers;
-use Modules\Tertiary\Models\Program;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,10 +9,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Tertiary\Filament\Resources\ProgramResource\Pages;
+use Modules\Tertiary\Models\Program;
 
 class ProgramResource extends Resource
 {
     protected static ?string $model = Program::class;
+
+    protected static ?string $slug = 'tertiary/program';
+
+    protected static ?string $navigationGroup = 'Tertiary';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

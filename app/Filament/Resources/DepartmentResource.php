@@ -2,9 +2,6 @@
 
 namespace Modules\Tertiary\Filament\Resources;
 
-use Modules\Tertiary\Filament\Resources\DepartmentResource\Pages;
-use Modules\Tertiary\Filament\Resources\DepartmentResource\RelationManagers;
-use Modules\Tertiary\Models\Department;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,10 +9,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Tertiary\Filament\Resources\DepartmentResource\Pages;
+use Modules\Tertiary\Models\Department;
 
 class DepartmentResource extends Resource
 {
     protected static ?string $model = Department::class;
+
+    protected static ?string $slug = 'tertiary/department';
+
+    protected static ?string $navigationGroup = 'Tertiary';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

@@ -2,9 +2,6 @@
 
 namespace Modules\Tertiary\Filament\Resources;
 
-use Modules\Tertiary\Filament\Resources\SchoolResource\Pages;
-use Modules\Tertiary\Filament\Resources\SchoolResource\RelationManagers;
-use Modules\Tertiary\Models\School;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,10 +9,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Tertiary\Filament\Resources\SchoolResource\Pages;
+use Modules\Tertiary\Models\School;
 
 class SchoolResource extends Resource
 {
     protected static ?string $model = School::class;
+
+    protected static ?string $slug = 'tertiary/school';
+
+    protected static ?string $navigationGroup = 'Tertiary';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

@@ -9,7 +9,7 @@ class TertiaryServiceProvider extends ServiceProvider
 {
     protected string $moduleName = 'Tertiary';
 
-    protected string $moduleNameLower = 'Tertiary';
+    protected string $moduleNameLower = 'tertiary';
 
     /**
      * Boot the application events.
