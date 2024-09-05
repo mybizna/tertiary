@@ -19,6 +19,6 @@ class Learner extends BaseModel
      *
      * @var string
      */
-    protected $table = "tertiary_student";
+    protected $table = "tertiary_learner";
 
 }

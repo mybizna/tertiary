@@ -18,6 +18,6 @@ class Tertiary extends BaseModel
      *
      * @var string
      */
-    protected $table = "tertiary";
+    protected $table = "tertiary_tertiary";
 
 }
