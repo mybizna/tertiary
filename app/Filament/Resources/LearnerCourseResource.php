@@ -3,15 +3,12 @@
 namespace Modules\Tertiary\Filament\Resources;
 
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Modules\Tertiary\Filament\Resources\LearnerCourseResource\Pages;
+use Modules\Base\Filament\Resources\BaseResource;
 use Modules\Tertiary\Models\LearnerCourse;
 
-class LearnerCourseResource extends Resource
+class LearnerCourseResource extends BaseResource
 {
     protected static ?string $model = LearnerCourse::class;
 
@@ -50,27 +47,4 @@ class LearnerCourseResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListLearnerCourses::route('/'),
-            'create' => Pages\CreateLearnerCourse::route('/create'),
-            'edit' => Pages\EditLearnerCourse::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
 }

@@ -3,15 +3,12 @@
 namespace Modules\Tertiary\Filament\Resources;
 
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Modules\Tertiary\Filament\Resources\TertiaryResource\Pages;
+use Modules\Base\Filament\Resources\BaseResource;
 use Modules\Tertiary\Models\Tertiary;
 
-class TertiaryResource extends Resource
+class TertiaryResource extends BaseResource
 {
     protected static ?string $model = Tertiary::class;
 
@@ -50,27 +47,4 @@ class TertiaryResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListTertiaries::route('/'),
-            'create' => Pages\CreateTertiary::route('/create'),
-            'edit' => Pages\EditTertiary::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
 }

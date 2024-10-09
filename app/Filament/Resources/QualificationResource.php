@@ -4,15 +4,12 @@ namespace Modules\Tertiary\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Modules\Tertiary\Filament\Resources\QualificationResource\Pages;
+use Modules\Base\Filament\Resources\BaseResource;
 use Modules\Tertiary\Models\Qualification;
 
-class QualificationResource extends Resource
+class QualificationResource extends BaseResource
 {
     protected static ?string $model = Qualification::class;
 
@@ -72,27 +69,4 @@ class QualificationResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListQualifications::route('/'),
-            'create' => Pages\CreateQualification::route('/create'),
-            'edit' => Pages\EditQualification::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
 }
