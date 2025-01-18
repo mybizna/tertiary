@@ -3,6 +3,7 @@
 namespace Modules\Tertiary\Models;
 
 use Modules\Base\Models\BaseModel;
+use Illuminate\Database\Schema\Blueprint;
 
 class Learner extends BaseModel
 {
@@ -21,4 +22,14 @@ class Learner extends BaseModel
      */
     protected $table = "tertiary_learner";
 
+
+    public function migration(Blueprint $table): void
+    {
+        $table->id();
+
+        $table->string('name');
+        $table->string('description');
+        $table->string('published');
+
+    }
 }

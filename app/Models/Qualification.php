@@ -3,6 +3,7 @@
 namespace Modules\Tertiary\Models;
 
 use Modules\Base\Models\BaseModel;
+use Illuminate\Database\Schema\Blueprint;
 
 class Qualification extends BaseModel
 {
@@ -20,4 +21,14 @@ class Qualification extends BaseModel
      */
     protected $table = "tertiary_qualification";
 
+
+    public function migration(Blueprint $table): void
+    {
+        $table->id();
+
+        $table->string('name');
+        $table->string('description');
+        $table->string('published');
+
+    }
 }

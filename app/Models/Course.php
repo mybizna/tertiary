@@ -3,6 +3,7 @@
 namespace Modules\Tertiary\Models;
 
 use Modules\Base\Models\BaseModel;
+use Illuminate\Database\Schema\Blueprint;
 
 class Course extends BaseModel
 {
@@ -21,4 +22,14 @@ class Course extends BaseModel
      */
     protected $table = "tertiary_school";
 
+
+    public function migration(Blueprint $table): void
+    {
+        $table->id();
+
+        $table->string('name');
+        $table->string('description');
+        $table->string('published');
+
+    }
 }
